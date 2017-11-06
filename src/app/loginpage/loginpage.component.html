@@ -1,0 +1,32 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-6">
+      <div class="card card-block">
+        <p style="font-size: 36px; text-align: center;color: #595959">ADMIN</p>
+          <div *ngIf="error">
+            <p style="color:red; text-align: center">Invalid username and passsword.</p>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+              <div class="form-group" style="padding:0 30px 10px 30px">
+                <label class="labelStyle" for="formGroupExampleInput">User ID</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="username" aria-describedby="basic-addon2">
+                   <span class="input-group-addon" id="basic-addon2"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+
+                <label class="labelStyle" for="formGroupExampleInput">Password (case sensitive)</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="password" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                </div>
+              </div>
+          
+
+          <p style="text-align: center">
+              <button type="submit" class="btn btn-primary" style="border:3px solid #1a8099; border-radius: 25px; background: #1a8099; " [disabled]="!loginForm.valid">SIGN IN</button>
+          </p>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

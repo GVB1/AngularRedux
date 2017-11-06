@@ -1,0 +1,39 @@
+.card{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+/* responsive queries */
+
+@media (max-width: 768px) {
+  .btn {
+	font-size:10px;
+    padding:4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+	font-size:12px;
+    padding:6px 12px;
+    min-width: 40px;
+  }
+}
+  
+@media (min-width: 992px) {
+  .btn {
+	font-size:14px;
+    padding:8px 12px;
+    min-width: 60px;
+  }
+}
+ 
+@media (min-width: 1200px) {
+  .btn {
+    padding:10px 16px;
+	font-size:16px;
+    min-width: 80px;
+  }
+}
+
+
+
